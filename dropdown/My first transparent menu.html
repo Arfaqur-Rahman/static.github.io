@@ -1,0 +1,57 @@
+<!DOCTYPE html/>
+
+<html>
+<head>
+<title>Transparent Menu Creation</title>
+<style>
+body{
+background:url(big.jpg) no-repeat;
+background-size: cover;
+font-family: Arial;
+color:white;
+}
+.navbar{
+}
+ul{
+margin:0;padding:0; list-style:none
+}
+ul li{
+	background-color:black;
+	float:left;
+	width:200px;
+	height:40px;
+	opacity:0.8;  /* This is what causes the transparency */
+	line-height:40px; 
+	text-align:center;
+	margin-right:2px;
+	font-size:20px; /*In case you need the texts look bigger*/
+	
+}
+ul li a{text-decoration:none;
+	display:block; 
+	color:white
+}
+ul li a:hover{background-color:orange;
+	color:black}
+ul li ul li {display:none;}
+ul li:hover ul li{display:block;}
+</style>
+</head>
+<body>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact Us</a></li>
+<li><a href="#">Images</a></li>
+<li><a href="#">Our Team</a>
+<ul>
+<li><a href="#">Developers</a></li>
+<li><a href="#">Designers</a></li>
+<li><a href="#">Other Personnels</a></li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>
