@@ -2,11 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>what is going on</title>
+    <title>Value gathering from an html box</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
-<body>
-   <h2>Just Checking</h2>
-   <button onclick="alert('You clicked')">alert</button>
-    oops dad!
+<body style="padding:30px">
+    
+<div class="jumbotron">
+  <h2>Your Value Input Box</h2>
+
+  <hr class="my-4">
+
+      <form id="valueBox" name="myform" onsubmit="valueInput() ; return false;" >
+       <table>
+           <tr>
+        <input  style="padding:10px;margin:0" type="text" name="text" id="valueBox" placeholder="Type something" required="1">
+        <input style="padding:10px; margin:0" id="submitBtn" type="submit" value="Send">
+            </tr>
+        </table>
+      </form>
+  <hr class="my-4">
+
+  <span id="output" class="lead" style="padding: 4px"></span>
+</div>
+
+
+
+
 </body>
 </html>
