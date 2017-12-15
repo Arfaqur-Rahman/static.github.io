@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz | Take a Test</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body>
+   <h2>Test Your skill! Take a Quiz!</h2>
+   <form id="quiz" name="quiz">
+       <p>What is the capital of Bangladesh? </p>
+       <input id="textbook" type="text" name="question1">
+       
+       <p>Who sang in "Love the way u lie"?</p>
+       <input id="mc" type="radio" name="question2" value="Eminem">Eminem <br>
+       <input id="mc" type="radio" name="question2" value="Akon">Akon <br>
+       
+       <p>Who was the lead vocalist of Linkin Park?</p>
+       <input id="mc" type="radio" name="question3" value="Chester">Chester <br>
+       <input id="mc" type="radio" name="question3" value="Mike">Mike <br>
+       
+       <input type="button" id="button" value="I'm finished!" onclick="check();" >
+   </form>
+   
+   <div id="after-submit">
+       <p id="number-correct">Great Job</p>
+       <img id="picture">
+   </div>
+   
+    <script src="main.js"></script>
+</body>
+</html>
