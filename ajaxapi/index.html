@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQury, AJAX & JSON</title>
+</head>
+
+<style>
+    .popup{
+        background-color: black;
+        position:absolute;
+        border:solid 2px white;
+        width:600px;
+        min-height: auto;
+        z-index:5000;
+        top: 100px;
+        margin-left:auto;
+        margin-right: auto;
+        left:0;
+        right: 0;
+    }
+    
+    .overlayBg{
+        background-color: #333;
+        opacity:0.5;
+        position: absolute;
+        z-index: 1000;
+        top:0px;
+        left:0px;
+        width:100%;
+        min-height: 100%
+    }
+    
+</style>
+
+<body>
+    <h1>jQuery AJAX APIs</h1>
+    What do you wanna find?
+    <input type="text" id="search" name="search">
+
+    <button type="button" id="searchButton">SEARCH</button>
+    <div class="buttonOptions">
+        <input type="button" class="tokenClass" value="Previous">
+        <input type="button" class="tokenClass" value="Next">
+    </div>
+    <div id="output"></div>
+    <div class="overlayBg"></div>
+    <div class="popup">
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5dsGWM5XGdg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        var pageToken = {};
+        $(document).ready(function() {
+            $('.popup').hide()
+            $('.overlayBg').hide()
+
+            $('#searchButton').click(function() {
+                searchYoutube();
+
+            })
+            $('.tokenClass').click(function() {
+                pageToken.current = $(this).val() == 'Next' ? pageToken.nextPage : pageToken.prevPage;
+                searchYoutube();
+            })
+
+            $('.overlayBg').click(function() {
+                $('.popup').hide()
+                $('.overlayBg').hide()
+
+            })
+
+            $('#output').on('click', '.thumbnail', function() {
+                $('.popup').show()
+                $('.overlayBg').show();
+                $(window).scrollTop(0)
+                $('.popup iframe').attr('src', 'https://www.youtube.com/embed/' + $(this).attr('videoID'));
+            })
+        })
+
+        function searchYoutube() {
+
+            $.ajax({
+                url: 'https://www.googleapis.com/youtube/v3/search',
+                dataType: 'json',
+                type: 'GET',
+                data: {
+                    key: 'AIzaSyAdRBajkqcK6RYprQZ6OzNS5u7cffqZB6A',
+                    q: $('#search').val(),
+                    part: 'snippet',
+                    maxResults: 5,
+                    pageToken: pageToken.current //"CBkQAA"
+                }
+            }).done(function(data) {
+
+                pageToken.nextPage = data.nextPageToken;
+                pageToken.prevPage = data.prevPageToken;
+
+                var html = "";
+                $.each(data['items'], function(index, value) {
+                    html += '<div><div class="title">' + value.snippet.title + '</div>';
+                    html += '<div><div class="url"><a href="https://www.youtube.com/watch?v=' + value.id.videoId + ' " target="_blank">' + value.id.videoId + '</a></div>';
+                    html += '<div><img class="thumbnail" src="' + value.snippet.thumbnails.medium.url + '"videoID="' + value.id.videoId + '" ></div>';
+                    html += '</div>';
+                    //                    console.log(value.snippet.title);
+                    //                    console.log(value.id.videoId);
+                    //                    console.log(value.snippet.thumbnails.medium.url);
+                })
+                $('#output').html(html);
+            })
+
+        }
+    </script>
+</body>
+
+</html>
