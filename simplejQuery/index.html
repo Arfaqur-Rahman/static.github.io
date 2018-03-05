@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   
+    <meta charset="UTF-8">
+    
+    <title>jQuery | Simple Project</title>
+    
+</head>
+
+<style>
+
+    .hidden{
+        
+        display: none;
+        
+    }
+    
+    .disclose{
+        
+        display:block;
+    }
+    
+</style>
+
+<body>
+    
+    <h1>jQuery Form</h1>
+    <a href="http://www.google.com">search google</a>
+    <form action="">
+        
+        <div class="content">
+           
+<!--           first div-->
+           
+            <div class="step">
+            
+                <h1>First Page</h1>
+
+                <p>This is the First Page</p>
+
+                <div>
+
+                    <a href="#">Next</a>
+
+                </div>
+            
+            </div>
+            
+<!--            second div-->
+            
+            <div class="step hiddenStep">
+            
+                <h1>Second Page</h1>
+
+                <p>This is the Second Page</p>
+
+                <div>
+
+                    <a href="#">Next</a>
+
+                </div>
+            
+            </div>
+            
+<!--            third div-->
+            
+            <div class="step hiddenStep">
+            
+                <h1>Third Page</h1>
+
+                <p>This is the Third Page</p>
+
+                <div>
+
+                    <a href="#">Next</a>
+
+                </div>
+            
+            </div>
+            
+        </div>
+        
+    </form>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+    <script>
+    
+        $(document).ready(function(){
+            //[Task: 1]- Hiding the 2nd and 3rd Divs with jQuery & JS
+            //jQuery
+             $('.hiddenStep').addClass('hidden'); //or
+            // $('.step').css('display','none');
+            
+//            Vanilla JS
+//            var myClasses = document.querySelectorAll('.step');
+//
+//            for (i=0; i < myClasses.length; i++) {
+//               // myClasses[i].className = "hidden"; //or
+//                myClasses[i].classList.add('hidden');
+//            }
+            //[Task: 1]-Completed
+            
+            
+            //[Task: 2]- Next Button
+            $('a[href="#"]').click(function(event){
+                event.preventDefault();
+                //console.log( $(this) );
+                var parent = $(this).closest('.step');
+                //console.log( parent )                
+                var mainContent = $('.content>.step');
+                var index = mainContent.index(parent)+1;
+                //console.log(index);
+                parent.css('display','none');// for whatever reason, addClass doesn't work here :(
+                mainContent.eq(index).addClass('disclose');
+                
+                
+            })
+            
+            
+            
+        })
+        
+    </script>
+         
+</body>
+         
+</html>
