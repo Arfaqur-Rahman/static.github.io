@@ -1069,11 +1069,20 @@ Output will be the average value of these three numbers.</div>
                 .type('}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
 				
 				//loveid
-				new TypeIt('#loveid', {
-						speed: 45
-					})	.options({ speed: 500 })
-						.pause(300)
-						.type('Love You All Guys!!')
+				var app = document.getElementById('loveid');
+
+				var typewriter = new Typewriter(app, {
+					loop: true
+				});
+
+				typewriter.typeString('Love You All Guys!')
+					.pauseFor(1000)
+					.deleteAll()
+					.typeString('Hope you are having agood d')
+					.pauseFor(1000)
+					.deleteChars(7)
+					.typeString('a good day!')
+					.start();
         
         });
 </script>
