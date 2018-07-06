@@ -296,7 +296,7 @@ Output will be the average value of these three numbers.</div>
 			int main(){
 				float radius = 3.5;
 				float area = pi * radius * radius;
-				/* You could also write area = pi * pow ( radius, 2) but you need to add #include<math.h> at the top.*/
+				/* You could also write area = pi * pow ( radius, 2) but you need to add #include&lt;math.h&gt; at the top.*/
 				printf("The area is: %f", area);
 				return 0;
 			}</pre>
@@ -393,7 +393,10 @@ Output will be the average value of these three numbers.</div>
 				printf("The sum of a and b=%d\n", a+b);
 				printf("The difference of a and b=%d\n", a-b);
 				printf("The product of a and b=%d\n", a*b);
-				printf("The quotient of a and b=%f", (float)a/b); /*Here %f is taken because the quotient of a/b may be a floating point number. (float) was written to convert the value of a/b into floating point value.(This is called type casting.) If (float) were not used, a/b would be an integer because a and b are integers themselves.*/
+				printf("The quotient of a and b=%f", (float)a/b); /*Here %f is taken because the 
+				quotient of a/b may be a floating point number. (float) was written to convert the 
+				value of a/b into floating point value.(This is called type casting.) If (float) 
+				were not used, a/b would be an integer because a and b are integers themselves.*/
 				printf("The remainder of a and b=%d\n", a%b);
 				return 0;
 			}</pre>
@@ -996,6 +999,11 @@ Output will be the average value of these three numbers.</div>
       </div>
 <!-- End of switch -->
     </main>
+	
+	<div class="container text-center">
+		<h3 id="loveid"></h3>
+		<img src="tenor.gif" class="img-fluid">
+	</div>
 
     <footer class="text-muted">
       <div class="container">
@@ -1059,6 +1067,13 @@ Output will be the average value of these three numbers.</div>
                 .pause(30)
                 .break()
                 .type('}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+				
+				//loveid
+				new TypeIt('#loveid', {
+						speed: 45
+					})	.options({ speed: 500 })
+						.pause(300)
+						.type('Love You All Guys!!')
         
         });
 </script>
