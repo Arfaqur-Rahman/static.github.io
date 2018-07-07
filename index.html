@@ -302,7 +302,44 @@ Output will be the average value of these three numbers.</div>
 			}</pre>
       </div>
     </div>
-  </div>   
+  </div> 
+<!-- nine -->
+      <div class="card">
+    <div class="card-header" role="tab" id="headingSeven">
+      <h6 class="mb-0">
+        <a class="collapsed" data-toggle="collapse"  href="#tab9" aria-expanded="false" aria-controls="collapseSeven">
+          9.	Find the sum, difference, product, quotient and remainder of two integer numbers, where <br>
+<div class=" text-center">num1 = 3 <br>
+num2 = 5 <br>
+</div>
+        </a>
+      </h6>
+    </div>   
+    <div id="tab9" class="collapse" role="tabpanel" aria-labelledby="headingSeven">
+      <div class="card-block">
+        <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int num1=3, num2=5;
+				int sum = num1+num2;
+				int diff = num1-num2;
+				int product = num1* num2;
+				float quotient = (float) num1/num2; /*num1 and num2 are
+				both integers. So their quotient will also be an integer.
+				To get the floating point value of quotient, we used (float).
+				This is called type casting.*/
+				int remainder= num1% num2;
+				printf("Sum of %d and %d is: %d\n", num1, num2, sum);
+				printf("Difference of %d and %d is: %d\n", num1, num2, diff);
+				printf("Product of %d and %d is: %d\n", num1, num2, product);
+				printf("Quotient of %d and %d is: %f\n", num1, num2, quotient);
+				printf("Remainder of %d and %d is: %d\n", num1, num2, remainder);
+				return 0;
+			}</pre>
+      </div>
+    </div>
+  </div>  
+  
 </div>    
 <!-- end box -->            
 <!-- Being used Don't delete -->            
