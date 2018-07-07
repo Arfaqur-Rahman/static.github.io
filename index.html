@@ -876,6 +876,50 @@ num2 = 5 <br>
       </div>
     </div>
   </div> 
+<!-- four -->
+      <div class="card">
+    <div class="card-header" role="tab" id="headingFour">
+      <h6 class="mb-0">
+		<a class="collapsed" data-toggle="collapse" href="#tab39">
+          9. A general quadratic equation is ax^2+bx+c=0. Write a program that takes three inputs(a,b and c) from the user and print the roots of this equation. The program should be efficient enough to deal with complex roots.
+        </a>
+      </h6>
+    </div>
+    <div id="tab39" class="collapse" >
+      <div class="card-block">
+        <pre>
+			#include&lt;stdio.h&gt;
+			#include&lt;math.h&gt;
+			int main(){
+				float a,b,c,x1,x2,p,q;
+				scanf("%f %f %f",&a,&b,&c);
+				/*When b^2-4ac is greater than or equal to
+				zero, we get two real numbers as the roots of
+				the quadratic equation.*/
+				if(pow(b,2)-4*a*c>=0){
+					x1=(-b + sqrt(pow(b,2)-4*a*c))/(2*a);
+					x2=(-b - sqrt(pow(b,2)-4*a*c))/(2*a);
+					printf("x1= %f, x2= %f",x1,x2);
+				/*When b^2-4ac is less than or equal to
+				zero, we get two complex numbers as the roots
+				of the quadratic equation. In this case, the
+				two roots are x1=p+qi, x2=p-qi, where p= -b/2a
+				and q=√(4ac-b^2)/2a*/
+				}else{
+					p=-b/(2*a);
+					q=sqrt(4*a*c-pow(b,2))/(2*a);
+					/*Alternatively, you can also put
+					q=sqrt( fabs(pow(b,2)-4*a*c) )/(2*a)
+					Here fabs() is the absolute value function
+					that converts any negative value into a positive
+					value.For example, fabs(-2.1)= 2.1  */
+					printf("x1= %f+%fi, x2= %f-%fi",p,q,p,q);
+				}
+				return 0;
+			}</pre>
+      </div>
+    </div>
+  </div>
 
 </div>    
 <!-- end box -->            
@@ -1047,26 +1091,7 @@ num2 = 5 <br>
       </div>
     </div>
   </div>
-    <!-- four 
-      <div class="card">
-    <div class="card-header" role="tab" id="headingFour">
-      <h6 class="mb-0">
-		<a class="collapsed" data-toggle="collapse" href="#tab44">
-          4. Now do it using only one printf statement
-        </a>
-      </h6>
-    </div>
-    <div id="tab44" class="collapse" >
-      <div class="card-block">
-        <pre>
-			#include&lt;stdio.h&gt;
-			int main(){
-				printf("I hear I forget,\nI see I believe,\nI do I understand");
-				return 0;
-			}</pre>
-      </div>
-    </div>
-  </div>-->
+    
   
 </div>    
 <!-- end box -->            
