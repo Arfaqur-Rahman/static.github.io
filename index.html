@@ -1100,6 +1100,42 @@ num2 = 5 <br>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- four -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingTwo">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab44">
+          4. Write a traffic light signaling program where when inputs are 'g', 'r' or 'y', outputs are respectively 'GREEN', 'RED' or 'YELLOW'. USe switch-case statement.
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab44" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				char c;
+            scanf("%c",&c);
+            switch(c){
+                case 'g':
+                    printf("GREEN");
+                    break;
+                case 'y':
+                    printf("YELLOW");
+                    break;
+                case 'r':
+                    printf("RED");
+                    break;
+                default:
+                    printf("INVALID INPUT");
+            }
+                return 0;
+            }</pre>
+                                        </div>
+                                    </div>
+                                </div>
+
+
 
 
                             </div>
@@ -1112,8 +1148,8 @@ num2 = 5 <br>
         </div>
         <!-- End of switch -->
     </main>
-    
-    
+
+
     <!-- contact form -->
     <div class="container-fluid">
         <div class="container" id="fcont">
@@ -1133,7 +1169,7 @@ num2 = 5 <br>
                 </div>
                 <div class="col-sm">
                     <!-- form -->
-                    <form  id="contactform" action="https://formsubmit.io/send/wannabeharbinger@gmail.com" method="POST">
+                    <form id="contactform" action="https://formsubmit.io/send/wannabeharbinger@gmail.com" method="POST">
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" name="name" class="form-control" id="name" placeholder="Type your name">
