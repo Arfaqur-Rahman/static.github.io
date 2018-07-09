@@ -1114,24 +1114,21 @@ num2 = 5 <br>
                                             <pre>
 			#include&lt;stdio.h&gt;
 			int main(){
-				char v;
-				printf("Enter a letter: ");
-				scanf("%c",&v);
-				switch(v){
-				case 'A':
-				case 'a':
-				case 'E':
-				case 'e':
-				case 'I':
-				case 'i':
-				case 'O':
-				case 'o':
-				case 'U':
-				case 'u':
-					printf("%c is a vowel",v);
-				break;
-				default:
-					printf("%c is a consonant",v);
+				char c;
+				scanf("%c",&c);
+				printf("Enter 'g', 'y' or 'r': ");
+				switch(c){
+					case 'g':
+						printf("GREEN");
+						break;
+					case 'y':
+						printf("YELLOW");
+						break;
+					case 'r':
+						printf("RED");
+						break;
+					default:
+						printf("INVALID INPUT");
 				}
 				return 0;
 			}</pre>
