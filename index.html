@@ -980,14 +980,16 @@ num2 = 5 <br>
 											<pre>
 			#include&lt;stdio.h&gt;
 			int main(){
-				int marks;
-				printf("Enter your marks: ");
-				scanf("%d",&marks);
-				if(marks >= 93) {printf("A")};
-				else if(marks>= 90 && marks<= 92 ) {printf("A-")};
-				else if(marks >= 87 && marks <=89) {printf("B+")};
-				else if(marks >= 83 && marks <=86) {printf("B")};
-				else if(marks < 83) {printf("F")};
+				double weight, height, bmi;
+				printf("Enter your weight: ");
+				scanf("%lf",&weight);
+				printf("Enter your height: ");
+				scanf("%lf",&height);
+				bmi = weight/ (height* height);
+				if(bmi <= 18.5) printf("Underweight");
+				else if(bmi>= 18.6 && bmi<= 25.0 ) printf("Normal Weight");
+				else if(bmi >= 25.1 && bmi <=30.0) printf("Overweight");
+				else  printf("Severely Overweight");
 				return 0;
 			}</pre>
 										</div>
