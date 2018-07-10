@@ -1201,9 +1201,473 @@ num2 = 5 <br>
                                         </div>
                                     </div>
                                 </div>
+		</div>
+                            <!-- end box -->
+                            <!-- Being used Don't delete -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of switch -->
+        <div class="container text-center">
+            <p style="margin-top:20px;"><a href="#">&#8657; Back to top</a></p>
+        </div>
 
 
+<div class="album py-5 bg-light">
+            <div class="container" id="c2">
+                <h1 id="loop">&nbsp;Loop</h1>
 
+                <!-- Start of loops -->
+                <div class="container-fluid">
+                    <hr>
+                    <div class="row">
+
+                        <div class="col-12">
+                            <h3>Problems with Loops:</h3>
+                            <div id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" data-parent="#accordion2" href="#tab51" aria-expanded="true" aria-controls="collapseOne">
+          1. Print something five times using a while loop.
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab51" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=1;
+				while(i<=5){
+					printf("Quizstruck\n");
+					i++;
+				}
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- two -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingTwo">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab52" aria-expanded="false" aria-controls="collapseTwo">
+          2. Now do the same task again but this time ask the user how many times he wants your program to print it. Also make sure your program is printing the serial number every time. 
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab52" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=1,n;
+				printf("Tell me how many times I should print: ");
+				scanf("%d",&n);
+				while(i<=n){
+					printf("%d. Quizstruck\n",i);
+					i++;
+				}
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- three -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab53" aria-expanded="false" aria-controls="collapseThree">
+          3. Print all the natural numbers from 1 to 100.
+
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab53" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=1;
+				printf("Printing 1-100 below:\n");
+				while(i<=100){
+					printf("%d\n",i);
+					i++;
+				}
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- four -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab54" aria-expanded="false" aria-controls="collapseThree">
+          4. Now print all the odd numbers ranging from 1 to 100.
+
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab54" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+			int i=1;
+			printf("Printing all odd numbers ranging from 1-100 \n");
+			while(i<=100){
+				if(i%2!=0){
+					printf("%d\n",i);
+				}
+				i++;
+			}//Now try printing the even numbers. Come on! You can do it! Give it a try!
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- five -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab55" aria-expanded="false" aria-controls="collapseThree">
+          5. Here is a series: 1+2+3+4+5+....+n. Ask the user for the value of n and calculate the sum of these numbers.
+
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab55" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=1,n,sum=0;
+				printf("Enter the value of n: ");
+				scanf("%d",&n);
+				while(i<=n){
+					sum=sum+i;
+					i++;
+				}
+				printf("The sum of the numbers is %d.",sum);
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- six -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab56" aria-expanded="false" aria-controls="collapseThree">
+          6. Now try to calculate the sum of this series: 2+4+6+8+10.
+
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab56" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=1,sum=0;
+				while(i<=5){
+					/*As there are 5 numbers in the series,
+					  we've set the condition to i<=5 .*/
+					sum=sum+i*2;
+					i++;
+				}
+				printf("The sum of the numbers is %d.\n",sum);
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- seven -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab57" aria-expanded="false" aria-controls="collapseThree">
+          7.  Now try to calculate the sum of this series: 1^2 + 2^2 +3^2 + 4^2 + 5^2 
+
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab57" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=1,sum=0;
+				while(i<=5){
+					/*As there are 5 numbers in the series,
+					  we've set the condition to i<=5 .*/
+					sum=sum+i*i;
+					i++;
+			}// Now solve this: 1^3 + 2^3 +3^3 + 4^3 + 5^3
+			printf("The sum of the numbers is %d.\n",sum);
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- eight -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab58" aria-expanded="false" aria-controls="collapseThree">
+          8. Ask the user for a number n and calculate the value of n!(factorial n) and print it.
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab58" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=1,f=1,n;
+				printf("Enter a number to get its factorial: ");
+				scanf("%d",&n);
+				while(i<=n){
+					f=f*i;
+					i++;
+				}
+				printf("The value of %d! is %d.\n",n,f);
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- nine -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingFour">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab59">
+          9. Ask the user to input 5 numbers and print the sum of those numbers.
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab59" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=1,sum=0,n;
+				printf("Enter 5 numbers to get their sum:\n ");
+				while(i<=5){
+					scanf("%d",&n);
+					sum=sum+n;
+					i++;
+				}
+				printf("The sum of the numbers is %d.\n",sum);
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+								
+								<!-- ten -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab510" aria-expanded="false" aria-controls="collapseThree">
+          10. Ask the user for a number and print the factors of that number. 
+
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab510" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=1,n;
+				printf("Enter a number to see their factors: ");
+				scanf("%d",&n);
+				while(i<=n){
+					if(n%i==0){
+						printf("%d\n",i);
+					}
+					i++;
+				}
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+								
+								<!-- eleven -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab511" aria-expanded="false" aria-controls="collapseThree">
+						11. Now edit the last program to also print how many factors a number has.
+		</a>
+										</h6>
+									</div>
+									<div id="tab511" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=1,n,j=0; //We are taking another variable j with 0 initial value
+				printf("Enter a number to see their factors: ");
+				scanf("%d",&n);
+				while(i<=n){
+					if(n%i==0){
+						printf("%d\n",i);
+						j++;//Every time there is an i to print, j will increment by 1
+					}
+					i++;
+				}
+				printf("%d has %d factors\n",n,j);
+				return 0;
+			}
+			//You can also try to print the sum of the factors</pre>
+										</div>
+									</div>
+								</div>
+								
+								<!-- twelve -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab512" aria-expanded="false" aria-controls="collapseThree">
+						12. Find the GCD(Greatest Common Divisor) of two numbers. [GCD is also called HCF(Highest Common Factor)] 
+		</a>
+										</h6>
+									</div>
+									<div id="tab512" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int a,b,temp;
+				printf("Enter two numbers find the GCD: ");
+				scanf("%d %d",&a,&b);
+				while(b%a!=0){
+						temp=b%a;
+						b=a;
+						a=temp;
+				}
+				printf("GCD=%d",a);
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>
+								
+						<!-- thirteen -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab513" aria-expanded="false" aria-controls="collapseThree">
+						13. Find the LCM(Least Common Multiple) of two numbers. <br>
+							Hint: product of two numbers = their GCD*their LCM
+		</a>
+										</h6>
+									</div>
+									<div id="tab513" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int a,b,temp,product;
+				printf("Enter two numbers find the GCD: ");
+				scanf("%d %d",&a,&b);
+				product = a*b;
+				while(b%a!=0){
+						temp=b%a;
+						b=a;
+						a=temp;
+				}
+				printf("LCM=%d",product/a);
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>
+								
+						<!-- forteen -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab514" aria-expanded="false" aria-controls="collapseThree">
+						14. Write a program using a do-while loop that prints any integer the user inputs. But when the user inputs 0, the program stops.
+		</a>
+										</h6>
+									</div>
+									<div id="tab514" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int n;
+				do{
+					scanf("%d",&n);
+					printf("%d\n",n);
+				}while(n!=0);
+				return 0;
+			}
+			//You can try to calculate the sum and average of the input numbers</pre>
+										</div>
+									</div>
+								</div>
+						
+						<!-- fifteen -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab515" aria-expanded="false" aria-controls="collapseThree">
+						15. Write a program to check if a number is a prime number or not. 
+		</a>
+										</h6>
+									</div>
+									<div id="tab515" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i,n,k=1;
+				printf("Enter a positive number: ");
+				scanf("%d",&n);
+				for(i=2;i<=sqrt(n);i++){
+					if(n%i==0){
+						k=0;
+					}
+				}
+				if(k==1){
+						printf("%d is prime",n);
+				}
+				else{
+						printf("%d is not prime",n);
+				}
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>
+						
+						<!-- sixteen but -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab516" aria-expanded="false" aria-controls="collapseThree">
+						To download the codes of the two lab classes, click the two links given below:
+		</a>
+										</h6>
+									</div>
+									<div id="tab516" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block center-text">
+											<br>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. <a href="https://drive.google.com/open?id=1W-tmXCvQnP-V4YiPkdLGKxtaWSAIahJV" target="_blank">Lab_Switch_WhileLoop_DoWhileLoop_4_July_2018</a><br><br>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. <a href="https://drive.google.com/open?id=1EFBmqUjvF2ggl9sivlisiSR7magkfI4p" target="_blank">Lab_ForLoop_9_July_2018</a><br><br>
+										</div>
+									</div>
+								</div>
 
                             </div>
                             <!-- end box -->
@@ -1213,7 +1677,14 @@ num2 = 5 <br>
                 </div>
             </div>
         </div>
-        <!-- End of switch -->
+        <!-- End of Loop -->
+        
+												
+								
+								
+								
+								
+							
     </main>
 
 
