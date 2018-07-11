@@ -615,6 +615,51 @@ num2 = 5 <br>
                                         </div>
                                     </div>
                                 </div>
+				<!-- Nine -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingEight">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#tab29" aria-expanded="false" aria-controls="collapseEight">
+          8. Write a program to show how many notes make that amount, if a user inputs an amount of money, (Keep the number of notes as few as possible.)<br>
+For example if a user inputs 525 taka, the output will be like this:<br>
+100 taka note 5 pieces.<br>
+50 taka note 0 pieces.<br>
+20 taka note 1 pieces.<br>
+10 taka note 0 pieces.<br>
+5 taka note 1 pieces.
+
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab29" class="collapse" role="tabpanel" aria-labelledby="headingEight">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int a,b;
+					printf("Enter the amount of money: ");
+					scanf("%d",&a);
+					b=a/100;
+					printf("100 taka note %d pieces.\n",b);
+					a=a%100;
+					b=a/50;
+					printf("50 taka note %d pieces.\n",b);
+					a=a%50;
+					b=a/20;
+					printf("20 taka note %d pieces.\n",b);
+					a=a%20;
+					b=a/10;
+					printf("10 taka note %d pieces.\n",b);
+					a=a%10;
+					b=a/5;
+					printf("5 taka note %d pieces.\n",b);
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+								
+								
                             </div>
                             <!-- end box -->
                             <!-- Being used Don't delete -->
