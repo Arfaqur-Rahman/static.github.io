@@ -1892,6 +1892,42 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 										</div>
 									</div>
 								</div>	
+								
+					<!-- 22 -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab522" aria-expanded="false" aria-controls="collapseThree">
+						22. Write a C program to calculate e^x when the value of x is input by the user.<br>
+							Hint: e^x= x^0/0! + x^1/1! + x^2/2! + x^3/3! + x^4/4! + ... +x^n/n!
+						
+		</a>
+										</h6>
+									</div>
+									<div id="tab522" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			#include&lt;math.h&gt;
+			int main(){
+				double d,x,term,num,dem,sum=0.0;
+				int i;
+				printf("Enter an angle value to find its cosine: ");
+				scanf("%lf",&d);
+				x= (d*3.14159)/180.0;
+				term=1;
+				i=0;
+				while(fabs(term)>0.000001){
+					sum=sum+term;
+					term=-(term*x*x)/((i+1)*(i+2));
+					i=i+2;
+				}
+				printf("The value of cos(%1.0lf) is %lf\n",d,sum);
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>	
 				
 				
 						
