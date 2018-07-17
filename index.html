@@ -1928,6 +1928,49 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 										</div>
 									</div>
 								</div>	
+								
+					<!-- 23 -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab523" aria-expanded="false" aria-controls="collapseThree">
+						23. Print the pattern:<br>
+&nbsp;&nbsp;&nbsp;****<br>
+&nbsp;&nbsp;*&nbsp;&nbsp;*<br>
+&nbsp;*&nbsp;&nbsp;*<br>
+****<br>
+						
+		</a>
+										</h6>
+									</div>
+									<div id="tab523" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i, j, rows;
+				/* Input number of rows from user */
+				printf("Enter rows : ");
+				scanf("%d", &rows);
+				for(i=1; i<=rows; i++){
+					/* Print trailing spaces */
+					for(j=1; j<=rows-i; j++){
+						printf(" ");
+					}
+					/* Print stars and center spaces */
+					for(j=1; j<=rows; j++){
+						if(i==1 || i==rows || j==1 || j==rows)
+							printf("*");
+						else
+							printf(" ");
+					}
+					printf("\n");
+				}
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>	
 				
 				
 						
