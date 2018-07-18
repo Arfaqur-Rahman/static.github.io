@@ -2064,7 +2064,7 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 										<h6 class="mb-0">
 											<a class="collapsed" data-toggle="collapse" href="#tab526" aria-expanded="false" aria-controls="collapseThree">
 						26. Print the pattern:<br>
-&nbsp;&nbsp;&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*<br>
 &nbsp;&nbsp;***<br>
 &nbsp;*****<br>
 						
@@ -2081,7 +2081,7 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 				scanf("%d", &rows);
 				for(i=1; i<=rows; i++)
 				{
-					for(j=i; j&lt;rows; j++)
+					for(j=i; j<rows; j++)
 					{
 						printf(" ");
 					}
@@ -2094,7 +2094,67 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 					
 					printf("\n");
 				}
-
+				}
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>	
+				
+				<!-- 27 -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab527" aria-expanded="false" aria-controls="collapseThree">
+						27. Print the pattern:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*<br>
+&nbsp;&nbsp;***<br>
+&nbsp;*****<br>
+&nbsp;&nbsp;***<br>	
+&nbsp;&nbsp;&nbsp;&nbsp;*<br>					
+		</a>
+										</h6>
+									</div>
+									<div id="tab527" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i, j, rows;
+				int stars, spaces;
+			   
+				printf("Enter rows to print : ");
+				scanf("%d", &rows);
+				
+				
+				stars = 1;
+				spaces = rows - 1;
+				
+				/* Iterate through rows */
+				for(i=1; i&lt;rows*2; i++)
+				{
+					/* Print spaces */
+					for(j=1; j<=spaces; j++)
+						printf(" ");
+					
+					/* Print stars */
+					for(j=1; j&lt;stars*2; j++)
+						printf("*");
+					
+					/* Move to next line */
+					printf("\n");
+					
+					if(i&lt;rows)
+					{
+						spaces--;
+						stars++;
+					}
+					else
+					{
+						spaces++;
+						stars--;
+					}
+				}
 				return 0;
 			}</pre>
 										</div>
