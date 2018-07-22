@@ -1638,7 +1638,7 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 								</div>
 								
 								
-						<!-- eleven -->
+						<!-- eleven_ -->
 								<div class="card">
 									<div class="card-header" role="tab" id="headingThree">
 										<h6 class="mb-0">
@@ -1665,6 +1665,41 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 				}
 				printf("%d has %d factors\n",n,j);
 				printf("sum of all the factors=%d\n",sum);
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>
+								
+						<!-- eleven__ -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab511__" aria-expanded="false" aria-controls="collapseThree">
+						- Now edit the last program to also determine whether the number is a perfect number.<br>
+The factors of a number other than the number itself are called proper factors. If the sum of those proper factors is equal to the number itself, the number is a perfect number. For example, 6 has 4 factors: 1 2 3 and 6. Here 1, 2 and 3 are the proper factors of 6. If we add these proper factors, we get (1+2+3)=6 which is equal to the number itself. So 6 is a perfect number.
+		</a>
+										</h6>
+									</div>
+									<div id="tab511__" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=1,n,sum=0;
+				printf("Enter a number to check if it is a perfect number: ");
+				scanf("%d",&n);
+				printf("Proper factors of %d are:\n",n);
+				while(i<n){ //We don't want i to become equal to n this time as i should be a proper factor
+					if(n%i==0){
+						printf("%d\n",i);
+						sum=sum+i;
+					}
+					i++;
+				}
+				printf("sum of all the proper factors=%d\n",sum);
+				if(sum==n) printf("%d is a perfect number\n",n);
+				else printf("%d is not a perfect number\n",n);
 				return 0;
 			}</pre>
 										</div>
