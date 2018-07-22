@@ -2159,6 +2159,44 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 										</div>
 									</div>
 								</div>	
+								
+						
+						<!-- 28 -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab528" aria-expanded="false" aria-controls="collapseThree">
+						28. Enter two integers and show the output of the factorials of all those numbers between that range<br>
+For example, if output is 1 5<br>
+Output will be:<br>
+Factorial of 1 is 1<br>
+Factorial of 2 is 2<br>
+Factorial of 3 is 6<br>
+Factorial of 4 is 24<br>
+Factorial of 5 is 120					
+		</a>
+										</h6>
+									</div>
+									<div id="tab528" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int n1, n2, n, i,s=1;
+				printf("input the range:");
+				scanf("%d %d", &n1, &n2);
+				for(n=n1; n<=n2; n++){
+					for(i=1; i<=n;i++){
+					s=s*i;
+				}
+					printf("Factorial of %d is %d \n", n, s);
+					s=1;// ei line add koro
+				}
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>	
 				
 						
 						<!-- lab link -->
