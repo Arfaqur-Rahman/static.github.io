@@ -1043,6 +1043,33 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 										</div>
 									</div>
 								</div>
+								
+								
+						<!-- 12 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab312" aria-expanded="false" aria-controls="collapseThree">
+          12. Take a letter from the alphabet as an input and print if it is a capital letter or a small letter.
+
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab312" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				char c;
+				scanf("%c",&c);
+				if(c>='A' && c<='Z') printf("Capital");
+				else if(c>='a' && c<='z') printf("Small");
+				else printf("Invalid input");
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
                             <!-- end box -->
