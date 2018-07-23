@@ -1793,7 +1793,7 @@ The factors of a number other than the number itself are called proper factors. 
 									</div>
 								</div>
 								
-						<!-- forteen__ -->
+						<!-- forteen_ -->
 								<div class="card">
 									<div class="card-header" role="tab" id="headingThree">
 										<h6 class="mb-0">
@@ -1813,6 +1813,36 @@ The factors of a number other than the number itself are called proper factors. 
 					sum=sum+n;
 				}while(n!=0);
 				printf("The sum of all the numbers is: %d\n",sum);
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>
+								
+						<!-- forteen__ -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab514__" aria-expanded="false" aria-controls="collapseThree">
+						- Edit the last program so that it outputs the average of all the numbers.
+		</a>
+										</h6>
+									</div>
+									<div id="tab514__" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int n,counter,sum=0;
+				float avg;
+				do{
+					scanf("%d",&n);
+					sum=sum+n;
+					counter++;
+				}while(n!=0);
+				avg= sum/(counter-1)*1.0; /*Multiplying by 1.0 so that we can get a floating point number.*/
+				/*When 0 is input to stop the program, the counter gets increased by 1 which we are ignoring by using (counter-1).*/
+				printf("The average of all the numbers is: %f\n",avg);
 				return 0;
 			}</pre>
 										</div>
