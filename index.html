@@ -2056,6 +2056,7 @@ The factors of a number other than the number itself are called proper factors. 
 									<div id="tab521" class="collapse" role="tabpanel" aria-labelledby="headingThree">
 										<div class="card-block">
 											<pre>
+			/*Process 1*/								
 			#include&lt;stdio.h&gt;
 			#include&lt;math.h&gt;
 			int main(){
@@ -2074,7 +2075,23 @@ The factors of a number other than the number itself are called proper factors. 
 				}
 				printf("The value of e^%1.0lf is %lf\n",x,sum);
 				return 0;
-			}</pre>
+			}
+			
+			/*Process 2*/
+			#include&lt;stdio.h&gt;
+			int main(){
+			double x,term,sum=0.0;
+			scanf("%lf",&x);
+			term=1;
+			int i=1;
+			while(term&gt;0.000001){ /*Only the terms bigger than 0.000001 are considered here*/
+				sum=sum+term;
+				term = term*x/ i;
+				i++;
+			}
+			printf("%lf",sum);
+			return 0;
+		}</pre>
 										</div>
 									</div>
 								</div>	
