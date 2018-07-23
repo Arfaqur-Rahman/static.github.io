@@ -2380,6 +2380,36 @@ Factorial of 5 is 120
 										</div>
 									</div>
 								</div>	
+								
+						<!-- 29 -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab529" aria-expanded="false" aria-controls="collapseThree">
+						29. Write a program to take a number as input and print the number backwards.<br>
+For example, if input is 123, output will be 321.
+					
+		</a>
+										</h6>
+									</div>
+									<div id="tab529" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int n,r;
+				printf("Enter a number to see it flipped: ");
+				scanf("%d",&n);
+				while(n!=0){
+                    r=n%10;
+                    printf("%d",r);
+                    n=n/10;
+				}
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>	
 				
 						
 						<!-- lab link -->
