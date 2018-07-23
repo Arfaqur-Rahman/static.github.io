@@ -2056,7 +2056,7 @@ The factors of a number other than the number itself are called proper factors. 
 									<div id="tab521" class="collapse" role="tabpanel" aria-labelledby="headingThree">
 										<div class="card-block">
 											<pre>
-			/*Process 1*/								
+			//Process 1								
 			#include&lt;stdio.h&gt;
 			#include&lt;math.h&gt;
 			int main(){
@@ -2066,9 +2066,9 @@ The factors of a number other than the number itself are called proper factors. 
 				scanf("%lf",&x);
 				for(i=0;i&lt;n;i++){
 					num=pow(x,i);
-					for(f=1,j=1;j<=i;j++){
+					for(f=1,j=1;j&lt;=i;j++){
 						f=f*j;
-						}
+					}
 					dem=f;
 					term=num/dem;
 					sum=sum+term;
@@ -2077,7 +2077,7 @@ The factors of a number other than the number itself are called proper factors. 
 				return 0;
 			}
 			
-			/*Process 2*/
+			//Process 2
 			#include&lt;stdio.h&gt;
 			int main(){
 			double x,term,sum=0.0;
@@ -2091,7 +2091,7 @@ The factors of a number other than the number itself are called proper factors. 
 			}
 			printf("%lf",sum);
 			return 0;
-		}</pre>
+			}</pre>
 										</div>
 									</div>
 								</div>	
@@ -2479,7 +2479,7 @@ For example, if input is 123, output will be 321.
                                     <div class="card-header" role="tab" id="headingOne">
                                         <h6 class="mb-0">
                                             <a data-toggle="collapse" href="#tab61">
-          1. Write a C function <strong>double exponent(double x,int y)</strong> that returns the value of x^y.<br>Here, x^y= product of y number of x.
+          1. Write a C function <strong>double exponent(double x, int y)</strong> that returns the value of x^y.<br>Here, x^y= product of y number of x.
         </a>
                                         </h6>
                                     </div>
