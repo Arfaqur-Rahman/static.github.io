@@ -2456,12 +2456,12 @@ For example, if input is 123, output will be 3.
 				printf("Enter a number to see how many digits it contain: ");
 				scanf("%d",&n);
 				while(n!=0){
-						/*If a number has say 5 digits, we can divide that number by 10 5 times.*/
-						n=n/10;
-						/*Each times n is divisible by 10, counter gets incremented by 1.*/
-						counter++;
+					/*Suppose a number has 5 digits. We can divide that number by 10 5 times.*/
+					n=n/10;
+					/*Each times n is divisible by 10, counter gets incremented by 1.*/
+					counter++;
 				}
-				printf("The number has %d digits.",counter);
+				printf("The number has %d digit(s).",counter);
 				return 0;
 			}</pre>
 										</div>
@@ -2493,6 +2493,36 @@ For example, if input is 123, output will be 321.
                     r=n%10;
                     printf("%d",r);
                     n=n/10;
+				}
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>	
+								
+								
+					<!-- 32 -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab532" aria-expanded="false" aria-controls="collapseThree">
+						32. Write a program that takes two numbers as input and prints the numbers between that range which are divisible by either 4 or 6 but not by both 4 and 6.<br>
+For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
+					
+		</a>
+										</h6>
+									</div>
+									<div id="tab532" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int A,B,i;
+				printf("Enter the range: ");
+				scanf("%d %d",&A,&B);
+				printf("Numbers under those conditions are: ");
+				for(i=A;i&lt;=B;i++){
+                    if( (i%4==0 || i%6==0) && !(i%4==0 && i%6==0) ) printf("%d ",i);
 				}
 				return 0;
 			}</pre>
