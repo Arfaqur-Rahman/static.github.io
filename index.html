@@ -2405,7 +2405,7 @@ $$$$$
 										<h6 class="mb-0">
 											<a class="collapsed" data-toggle="collapse" href="#tab529" aria-expanded="false" aria-controls="collapseThree">
 						29. Enter two integers and show the output of the factorials of all those numbers between that range<br>
-For example, if input is 1 &nbsp;&nbsp; 5<br>
+For example, if input is '1' and '5'<br>
 Output will be:<br>
 Factorial of 1 is 1<br>
 Factorial of 2 is 2<br>
@@ -2452,11 +2452,13 @@ For example, if input is 123, output will be 3.
 											<pre>
 			#include&lt;stdio.h&gt;
 			int main(){
-				int n,counter;
+				int n,counter=0;
 				printf("Enter a number to see how many digits it contain: ");
 				scanf("%d",&n);
 				while(n!=0){
+					/*If a number has say 5 digits, we can divide that number by 10 5 times.*/
                     n=n/10;
+					/*Each times n is divisible by 10, counter gets incremented by 1.*/
 					counter++;
 				}
 				printf("The number has %d digits.",counter);
