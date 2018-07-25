@@ -2442,13 +2442,46 @@ Factorial of 5 is 120
 									<div class="card-header" role="tab" id="headingThree">
 										<h6 class="mb-0">
 											<a class="collapsed" data-toggle="collapse" href="#tab530" aria-expanded="false" aria-controls="collapseThree">
-						30. Write a program to take a number as input and print the number backwards.<br>
-For example, if input is 123, output will be 321.
+						30. Write a program that takes a number as input and prints how many digits the nmber has.<br>
+For example, if input is 123, output will be 3.
 					
 		</a>
 										</h6>
 									</div>
 									<div id="tab530" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int num,counter;
+				printf("Enter a number to see how many digits it contain: ");
+				scanf("%d",&n);
+				while(num!=0)
+				{
+                    n=n/10;
+					counter++;
+				}
+				printf("The number has %d digits.",counter);
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>	
+								
+								
+						
+						<!-- 31 -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab531" aria-expanded="false" aria-controls="collapseThree">
+						31. Write a program that takes a number as input and prints the number backwards.<br>
+For example, if input is 123, output will be 321.
+					
+		</a>
+										</h6>
+									</div>
+									<div id="tab531" class="collapse" role="tabpanel" aria-labelledby="headingThree">
 										<div class="card-block">
 											<pre>
 			#include&lt;stdio.h&gt;
