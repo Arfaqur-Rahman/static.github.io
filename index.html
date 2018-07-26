@@ -2358,39 +2358,26 @@ $$$$$
 											<pre>
 			#include&lt;stdio.h&gt;
 			int main(){
-				int i, j, rows;
-				int stars, spaces;
-			   
-				printf("Enter rows to print : ");
-				scanf("%d", &rows);
-				
-				stars = 1;
-				spaces = rows - 1;
-				
-				/* Iterate through rows */
-				for(i=1; i&lt;rows*2; i++)
-				{
-					/* Print spaces */
-					for(j=1; j<=spaces; j++)
-						printf(" ");
-					
-					/* Print stars */
-					for(j=1; j&lt;stars*2; j++)
+				int i,j,rows;
+				printf("Enter the number of rows: ");
+				scanf("%d",&rows);
+				for(i=1; i&lt;=rows ;i++){//To print new rows
+					for(j=rows;j&gt;i;j--){
+						printf(" ");//To print spaces
+					}
+					for(j=1;j&lt;=2*i-1;j++){ //To print stars
 						printf("*");
-					
-					/* Move to next line */
+					}
 					printf("\n");
-					
-					if(i&lt;rows)
-					{
-						spaces--;
-						stars++;
+				}
+				for(i=1; i&lt;rows ;i++){//To print new rows(This time, one short-Hence the i<rows instead of i<=rows)
+					for(j=1;j&lt;=i;j++){//To print spaces
+						printf(" ");
 					}
-					else
-					{
-						spaces++;
-						stars--;
+					for(j=rows+2;j&gt;=2*i-1;j--){//To print stars
+						printf("*");
 					}
+						printf("\n");
 				}
 				return 0;
 			}</pre>
@@ -2427,8 +2414,6 @@ Factorial of 5 is 120
 					for(i=1; i<=n;i++){
 					s=s*i;
 				}
-				printf("Factorial of %d is %d \n", n, s);
-				s=1;//Don't forget this line!
 				}
 				return 0;
 			}</pre>
