@@ -2559,6 +2559,123 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                             <h3>Problems with Function:</h3>
                             <div id="accordion" role="tablist" aria-multiselectable="true">
 							
+							
+							<!--General Discussion on Function -->
+								<!-- 1 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab61">
+          -Here is an overview on four types of functions:<br>
+		  &nbsp;-Non-void function with argument
+		  &nbsp;-Non-void function without argument
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab61" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			/*Type:1 Non-void function with argument*/
+			
+			/*Function Declaration*/
+			int Max(int, int);
+
+			int main(){
+				int x,y,z;
+				scanf("%d %d",&x,&y);
+				/*Function Calling or Invoking*/
+				z=Max(x,y);
+				printf("%d is greater!",z);
+				return 0;
+			}
+
+			/*Function Definition*/
+			int Max(int a, int b){//Here a and b inside the parentheses are the arguments
+				if(a>b){
+					return a;
+				}else{
+					return b;
+				}
+			}
+			
+			/*Type:2 Non-void function with argument*/
+			
+			#include<stdio.h>
+    
+			/*Function Declaration*/
+			int Max();
+
+			int main(){
+				int z;
+				/*Function Calling or Invoking*/
+				z=Max();
+				printf("%d is greater!",z);
+				return 0;
+			}
+
+			/*Function Definition*/
+			int Max(){ //No argument inside the parentheses
+				int a,b;
+				scanf("%d %d",&a,&b);
+				if(a>b){
+					return a;
+				}else{
+					return b;
+				}
+			}
+			
+			/*Type:3 Void function with argument*/
+
+			#include<stdio.h>
+
+			/*Function Declaration*/
+			void Max(int, int);
+
+			int main(){
+				int x,y;
+				scanf("%d %d",&x,&y);
+				/*Function Calling or Invoking*/
+				Max(x,y);
+				return 0;
+			}
+
+			/*Function Definition*/
+			void Max(int a, int b){ //Here a and b inside the parentheses are the arguments
+				if(a>b){
+					printf("%d is greater.",a);
+				}else{
+					printf("%d is greater.",b);
+				}
+			}
+			
+			/*Type:4 Void function without argument*/
+
+			#include<stdio.h>
+
+			/*Function Declaration*/
+			void Max();
+
+			int main(){
+				int x,y;
+				/*Function Calling or Invoking*/
+				Max();
+				return 0;
+			}
+
+			/*Function Definition*/
+			void Max(){ //No argument inside the parentheses
+				int a,b;
+				scanf("%d %d",&a,&b);
+				if(a>b){
+					printf("%d is greater.",a);
+				}else{
+					printf("%d is greater.",b);
+				}
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+							
 							<!-- 1 -->
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingOne">
