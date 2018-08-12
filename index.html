@@ -2828,6 +2828,11 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
             </p>
 
             <p class="text-center float-left">&copy;2018 - Put together by <a href="https://www.facebook.com/arfaqur.rahman.31" title="Cokeaholic-Introvert-Series Junkie-Sleepaholic-Quixotic" target="_blank">Md. Arfaqur Rahman</a></p>
+           <!-- <p class="text-center float-left">&copy;2018 - Put together by <a href="https://www.facebook.com/arfaqur.rahman.31" title="Cokeaholic-Introvert-Series Junkie-Sleepaholic-Quixotic" target="_blank">Md. Arfaqur Rahman</a></p> -->
+		   <p class="text-center float-left">&copy;2018 - Put together by <a href="https://www.facebook.com/arfaqur.rahman.31" data-toggle="tooltip" title="Cokeaholic-Introvert-Series Junkie-Sleepaholic-Quixotic" target="_blank">Md. Arfaqur Rahman</a></p>
+			
+
+
         </div>
     </footer>
 
@@ -2852,6 +2857,9 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
         }
 
         $(function() {
+		
+		$('[data-toggle="tooltip"]').tooltip();
+		
             new TypeIt('#element', {
                     speed: 45
                 }).options({
