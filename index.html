@@ -2927,9 +2927,10 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
 				}
 				return 0;
 			}
-			/*After Grim input[i]=' ' and input[i+1]=' '
-			  So nothing will be printed.
-			  Then, input[i]=' ' but input[i+1]=r(which makes the second condition true),
+			/*A bit of explanation:
+			  After Grim, input[i]=' ' and input[i+1]=' '
+			  So nothing will be printed.(because none of the condition is satisfied)
+			  Then, input[i]=' ' but input[i+1]=r(which makes the second condition satisfied),
 			  so input[i]=' ' will be printed.
 			*/</pre>
                                         </div>
