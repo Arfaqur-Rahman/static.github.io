@@ -2964,6 +2964,34 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                         </div>
                                     </div>
                                 </div>
+								
+						<!-- 2 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab75">
+          5. Write a program to remove all characters in a string except digits.
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab75" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int i;
+				char str[100];
+				printf("Enter your string input: ");
+				gets(str);
+                for(i=0;str[i]!='\0';i++){
+                    if( (str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z') ) {
+                        printf("%c",str[i]);
+                    }
+                }
+				return 0;			
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
 		
 		
 							</div>
