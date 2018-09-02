@@ -2881,8 +2881,8 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
 			#include&lt;stdio.h&gt;
 			int main(){
 				int i=0, result=0,sign=1;
-
 				char str[100];
+				printf("Enter your string input: ");
 				gets(str);
 
 				if(str[0]=='-'){
@@ -2891,10 +2891,9 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
 				}
 				for(;str[i]!='\0';i++){
 					result = result *10+ str[i]-'0';
-					printf("%d\n",result);
 				}
 				result = sign* result ;
-				printf("%d",result);
+				printf("Your integer output is: %d",result);
 				return 0;				
 			}</pre>
                                         </div>
