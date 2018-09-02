@@ -2991,7 +2991,7 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
 				printf("Enter your string input: ");
 				gets(str);
                 for(i=0;str[i]!='\0';i++){
-                    if( (str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z') ) {
+                    if( !(str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z') ) {
                         printf("%c",str[i]);
                     }
                 }
