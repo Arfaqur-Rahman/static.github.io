@@ -2840,22 +2840,33 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                         <div class="card-block">
                                             <pre>
 			#include&lt;stdio.h&gt;
-			#define size 5
-			void sum(int *x, int *y);//function prototype/declaration
+			void sum(int *x, int *y, int size);//function prototype/declaration
 
 			int main(){
-				int a[size]={1,2,-3,40,-1};
-				int b[size]={3,-8,4,6,4};
-				add(a,b);  //function calling/ invoking
+				int size,i;
+				printf("Enter the size of the array: ",i+1);
+				scanf("%d",&size);
+				int a[size], b[size];
+				for(i=0;i&lt;size;i++){
+					printf("enter the %dth element in array a: ",i+1);
+					scanf("%d",a+i);
+				}
+				printf("\n\n");
+				for(i=0;i&lt;size;i++){
+					printf("enter the %dth element in array b: ",i+1);
+					scanf("%d",b+i);
+				}
+				add(a,b,size);  //function calling/ invoking
 				return 0;
 			}
 
-			void add(int *x, int *y){//function definition
+			void add(int *x, int *y,int size){//function definition
 				int i;
+				printf("After adding the two array elements we get:");
 				for(i=0;i&lt;size;i++){
 					*(x+i)=*(x+i)+*(y+i);
 					printf("%d ",*(x+i) );
-				}
+				}			
 			}</pre>
                                         </div>
                                     </div>
