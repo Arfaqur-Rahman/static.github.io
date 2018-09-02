@@ -121,6 +121,9 @@ SVG Icons - svgicons.sparkk.fr
                         <a href="#function" class="btn btn-info btn-lg btn-block">Function</a> 
                     </div>
 					<div class="col-sm">
+                        <a href="#string" class="btn btn-info btn-lg btn-block">String</a> 
+                    </div>
+					<div class="col-sm">
                         <a href="#pointer" class="btn btn-info btn-lg btn-block">Pointer</a> 
                     </div>
                 </div>
@@ -2822,7 +2825,7 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
 		
 		<div class="album py-5 bg-light">
             <div class="container" id="c2">
-                <h1 id="pointer">&nbsp;Pointer</h1>
+                <h1 id="string">&nbsp;String</h1>
 
                 <!-- Start Function -->
                 <div class="container-fluid">
@@ -2830,7 +2833,7 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                     <div class="row">
 
                         <div class="col-12" id="colapagebox">
-                            <h3>Problems with Function:</h3>
+                            <h3>Problems with Strings:</h3>
                             <div id="accordion" role="tablist" aria-multiselectable="true">
 							
 							
@@ -2840,12 +2843,166 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                     <div class="card-header" role="tab" id="headingOne">
                                         <h6 class="mb-0">
                                             <a data-toggle="collapse" href="#tab71">
+          1. Write a program that converts all lowercase characters in a given string into its equivalent uppercase characters without using any library function.
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab71" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			
+			int main(){
+				int i;
+				char str[100];
+				scanf("%s",&str); //or you can write gets(str);
+				for(i=0;str[i]!='\0';i++){
+					str[i]=str[i]-32;
+				}
+				printf("%s",str); ////or you can write puts(str);
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+							
+							<!-- 2 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab72">
+          2. Write a program that converts a string like "124" to an integer like 124.
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab72" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int i=0, result=0,sign=1;
+
+				char str[100];
+				gets(str);
+
+				if(str[0]=='-'){
+					i++;
+					sign=-1;
+				}
+				for(;str[i]!='\0';i++){
+					result = result *10+ str[i]-'0';
+					printf("%d\n",result);
+				}
+				result = sign* result ;
+				printf("%d",result);
+				return 0;				
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+								
+								
+                                <!-- 3 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab73">
+          3. Write a C program that replaces two or more consecutive blanks in a string by a single blank.<br>
+		  For example, if the input is: Grim  return  to  the  planet  of  apes.<br>
+		  Output will be: Grim return to the planet of apes.
+			</a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab73" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				char input[1000];
+				int i=0;
+				gets(input);
+				for(i=0;input[i]!='\0';i++)
+				{
+					if(input[i]!=' ' || input[i+1]!=' ')
+						printf("%c",input[i]);
+				}
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+								
+								<!-- 4 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab74">
+          4. Write a C program to find the frequency of a character in a string.<br>
+		  Sample input string: abaacton<br>
+		  Sample input character: a<br>
+		  Sample output: a is found 3 times<br>
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab74" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+
+			int main(){
+				char input[1000],character;
+				int i=0, counter=0;
+				gets(input);
+				printf("Enter the character you want to look for: ");
+				scanf("%c",&character);
+				for(i=0;input[i]!='\0';i++){
+					if(input[i]== character ) counter++;
+
+				}
+				printf("%c is found %d times.\n",character,counter);
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+		
+		
+							</div>
+                            <!-- end box -->
+                            <!-- Being used Don't delete -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Pointer -->
+								
+		<div class="album py-5 bg-light">
+            <div class="container" id="c2">
+                <h1 id="pointer">&nbsp;Pointer</h1>
+
+                <!-- Start Function -->
+                <div class="container-fluid">
+                    <hr>
+                    <div class="row">
+
+                        <div class="col-12" id="colapagebox">
+                            <h3>Problems with Pointer:</h3>
+                            <div id="accordion" role="tablist" aria-multiselectable="true">
+							
+							
+							<!--General Discussion on Function -->
+								<!-- 1 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab81">
           1. Write a C program to calculate the area and perimeter of a circle using pointer.<br>
 		  <strong>void areaPeri(int *r)</strong>
         </a>
                                         </h6>
                                     </div>
-                                    <div id="tab71" class="collapse">
+                                    <div id="tab81" class="collapse">
                                         <div class="card-block">
                                             <pre>
 			#include&lt;stdio.h&gt;
@@ -2871,12 +3028,12 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingOne">
                                         <h6 class="mb-0">
-                                            <a data-toggle="collapse" href="#tab72">
+                                            <a data-toggle="collapse" href="#tab82">
           2. Write a C function which will display sum of two arrays using pointers.
         </a>
                                         </h6>
                                     </div>
-                                    <div id="tab72" class="collapse">
+                                    <div id="tab82" class="collapse">
                                         <div class="card-block">
                                             <pre>
 			#include&lt;stdio.h&gt;
@@ -2917,12 +3074,12 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingOne">
                                         <h6 class="mb-0">
-                                            <a data-toggle="collapse" href="#tab73">
+                                            <a data-toggle="collapse" href="#tab83">
           3. Write a C program using pointers to read in an array of integers and print its elements in reverse order.
 			</a>
                                         </h6>
                                     </div>
-                                    <div id="tab73" class="collapse">
+                                    <div id="tab83" class="collapse">
                                         <div class="card-block">
                                             <pre>
 			#include&lt;stdio.h&gt;
@@ -2966,12 +3123,12 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingOne">
                                         <h6 class="mb-0">
-                                            <a data-toggle="collapse" href="#tab74">
+                                            <a data-toggle="collapse" href="#tab84">
           4. Create an array of size give by the user. Find a number taken as input from user. Your task is to print the memory address and the index of the number using pointer to travel the array. Note that if number is found at multiple position you should print all memory address.
         </a>
                                         </h6>
                                     </div>
-                                    <div id="tab74" class="collapse">
+                                    <div id="tab84" class="collapse">
                                         <div class="card-block">
                                             <pre>
 			#include&lt;stdio.h&gt;
@@ -3014,8 +3171,6 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
             </div>
         </div>
         <!-- End of Pointer -->
-								
-		
 
 			
     </main>
