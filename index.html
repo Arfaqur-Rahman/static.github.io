@@ -2986,7 +2986,8 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                         <div class="card-block">
                                             <pre>
 			#include&lt;stdio.h&gt;
-			int i;
+				int main(){
+				int i;
 				char str[100];
 				printf("Enter your string input: ");
 				gets(str);
@@ -3017,7 +3018,6 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                         <div class="card-block">
                                             <pre>
 			#include&lt;stdio.h&gt;
-			#include<string.h>
 			int main(){
 				int i,j;
 				char str[100],str2[100];
@@ -3036,6 +3036,49 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                     </div>
                                 </div>
 		
+				<!-- 7 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab77">
+          7. Write a C program to take a string as input and<br>
+		  a. Count the total number of words in a string<br>
+		  b. Eliminate all the characters except alphabets from that given string and print the remaining string.<br>
+		  Sample input: I love my family<br>
+		  Sample output: There are 4 words<br>
+		  Filtered string: Ilovemyfamily
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab77" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			#include&lt;string.h&gt;
+			
+			int main(){
+				int i,w=0;
+				char str[100];
+				printf("Enter a string: ");
+				gets(str);
+				for(i=0;str[i]!='\0';i++){
+					if(str[i]==' '){
+						w++;
+					}
+				}
+				printf("%d words\n",w+1);//number of words=number of spaces+1
+				printf("Filtered string:");
+				for(i=0;str[i]!='\0';i++){
+					if( (str[i]>='a'&&str[i]<='z') || (str[i]>='A'&&str[i]<='Z') ){
+						printf("%c",str[i]);
+					}
+				}
+				return 0;			
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+		
 		
 							</div>
                             <!-- end box -->
@@ -3045,7 +3088,7 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                 </div>
             </div>
         </div>
-        <!-- End of Pointer -->
+        <!-- End of String -->
 								
 		<div class="album py-5 bg-light">
             <div class="container" id="c2">
