@@ -2517,6 +2517,46 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
 										</div>
 									</div>
 								</div>	
+								
+								
+								<!-- 33 -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab533" aria-expanded="false" aria-controls="collapseThree">
+						33. Print the pattern given below.<br>
+							<pre>
+				1
+                        2               3
+                4               5               6
+        7               8               9               10
+11              12              13              14              15</pre>
+					
+		</a>
+										</h6>
+									</div>
+									<div id="tab533" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+			int i,j,row,num=1;
+			printf("Enter the number of rows: ");
+			scanf("%d",&row);
+			for(i=1;i<=row;i++){
+				for(j=row-i;j>=1;j--){
+					printf("\t");
+				}
+				for(j=1;j<=i;j++,num++){
+					printf("%d\t\t",num);
+				}
+				printf("\n");
+			}
+			return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>	
 				
 						
 						<!-- lab link -->
