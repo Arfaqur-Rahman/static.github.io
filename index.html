@@ -2799,16 +2799,16 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingOne">
                                         <h6 class="mb-0">
-                                            <a data-toggle="collapse" href="#tab60">
+                                            <a data-toggle="collapse" href="#tab71">
           1. Write a C program to calculate the area and perimeter of a circle using pointer.<br>
 		  <strong>void areaPeri(int *r)</strong>
         </a>
                                         </h6>
                                     </div>
-                                    <div id="tab60" class="collapse">
+                                    <div id="tab71" class="collapse">
                                         <div class="card-block">
                                             <pre>
-			#include<stdio.h>
+			#include&lt;stdio.h&gt;
 			
 			void areaPeri(float *r); 
 			
@@ -2831,12 +2831,12 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingOne">
                                         <h6 class="mb-0">
-                                            <a data-toggle="collapse" href="#tab61">
+                                            <a data-toggle="collapse" href="#tab72">
           2. Write a C function which will display sum of two arrays using pointers.
         </a>
                                         </h6>
                                     </div>
-                                    <div id="tab61" class="collapse">
+                                    <div id="tab72" class="collapse">
                                         <div class="card-block">
                                             <pre>
 			#include&lt;stdio.h&gt;
@@ -2852,7 +2852,7 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
 
 			void add(int *x, int *y){//function definition
 				int i;
-				for(i=0;i<size;i++){
+				for(i=0;i&lt;size;i++){
 					*(x+i)=*(x+i)+*(y+i);
 					printf("%d ",*(x+i) );
 				}
@@ -2862,48 +2862,89 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                 </div>
 								
 								
-                                <!-- two -->
+                                <!-- 3 -->
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingOne">
                                         <h6 class="mb-0">
-                                            <a data-toggle="collapse" href="#tab62">
-          2. Write a C program with two functions: <strong>int surfacearea(int l,int w,int h)</strong> and <strong>int volume(int l,int w,int h)</strong>. Now take the length, width and height of a cuboid as input and print its surfacearea and volume.<br>
-			For example, if inputs are 3 2 1, outputs will be:<br>
-			The area of the cuboid is 22<br>
-			The volume of the cuboid is 6
+                                            <a data-toggle="collapse" href="#tab73">
+          3. Write a C program using pointers to read in an array of integers and print its elements in reverse order.
 			</a>
                                         </h6>
                                     </div>
-                                    <div id="tab62" class="collapse">
+                                    <div id="tab73" class="collapse">
                                         <div class="card-block">
                                             <pre>
 			#include&lt;stdio.h&gt;
+			void show(int *x,int size);
+			void reverse(int *x,int size);
 			
-			int spacearea(int l,int w,int h);
-			
-			int volume(int l,int w,int h);
-
-			int surfacearea(int l,int w,int h){
-				return 2*(l*w+w*h+h*l);
+			void show(int *x,int size){
+			int i;
+			for(i=0;i&lt;size;i++)
+			printf("%d ",*(x+i));
 			}
 
-			int volume(int l,int w,int h){
-				return l*w*h;
+			void reverse(int *x,int size){
+				int i=0,j=size-1,t;
+				while(i&lt;j){
+					t=*(x+i);
+					*(x+i)=*(x+j);
+					*(x+j)=t;
+					i++;
+					j--;
+				}
 			}
+
 			int main(){
-				int l,w,h,area,vol;
-				printf("Enter the length, width and height of the cuboid: ");
-				scanf("%d %d %d",&l,&w,&h);
-				area=surfacearea(l,w,h);
-				vol=volume(l,w,h);
-				printf("The area of the cuboid is %d\n",area);
-				printf("The volume of the cuboid is %d\n",vol);
-				return 0;
+			int size,i;
+			printf("Enter the size of the array: ");
+			scanf("%d",&size);
+			int x[size];
+			for(i=0;i&lt;size;i++){
+				scanf("%d", x+i);
+			}
+			reverse(x,size);
+			show(x,size);
+			return 0;
 			}</pre>
                                         </div>
                                     </div>
                                 </div>
 								
+								<!-- 4 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab74">
+          4. Create an array of size give by the user. Find a number taken as input from user. Your task is to print the memory address and the index of the number using pointer to travel the array. Note that if number is found at multiple position you should print all memory address.
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab74" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int size,i,searchN;
+				printf("Enter the size of the array: ");
+				scanf("%d",&size);
+				int x[size];
+				for(i=0;i&lt;size;i++){
+						scanf("%d", x+i);
+				}
+				printf("Enter the number you want to search for: ");
+				scanf("%d",&searchN);
+				for(i=0;i&lt;size;i++){
+					if(x[i]==searchN){
+						printf("Memory Address:%p\nIndex:%d\n",x+i,i);
+					}
+				}
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+		
 		
 							</div>
                             <!-- end box -->
