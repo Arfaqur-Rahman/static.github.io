@@ -2994,6 +2994,41 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                         </div>
                                     </div>
                                 </div>
+								
+								
+						<!-- 6 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab76">
+          6. Write a C program to check whether a string is a palindrome or not.<br>
+		  Sample input string: madam<br>
+		  Sample output: madam is a palindrome<br>
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab76" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+			#include<string.h>
+			int main(){
+				int i,j;
+				char str[100],str2[100];
+				printf("Enter a string to check if it's a palindrome: ");
+				gets(str);
+				int str_length=strlen(str);
+				for(i=0,j=str_length-1;str[i]!='\0';i++,j--){
+					str2[i]=str[j];
+				}
+				str2[i]='\0';
+				if(strcmp(str2,str)==0 )printf("%s is a palindrome",str);
+				else printf("%s is not a palindrome",str);
+				return 0;			
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
 		
 		
 							</div>
