@@ -2935,14 +2935,23 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                         <div class="card-block">
                                             <pre>
 			#include&lt;stdio.h&gt;
+
+			void search(int *x,int size);
+
 			int main(){
-				int size,i,searchN;
+				int size,i;
 				printf("Enter the size of the array: ");
 				scanf("%d",&size);
 				int x[size];
 				for(i=0;i&lt;size;i++){
 						scanf("%d", x+i);
 				}
+				search(x,size);
+				return 0;
+			}
+			
+			void search(int *x,int size){
+				int i, searchN;
 				printf("Enter the number you want to search for: ");
 				scanf("%d",&searchN);
 				for(i=0;i&lt;size;i++){
@@ -2950,7 +2959,6 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
 						printf("Memory Address:%p\nIndex:%d\n",x+i,i);
 					}
 				}
-				return 0;
 			}</pre>
                                         </div>
                                     </div>
