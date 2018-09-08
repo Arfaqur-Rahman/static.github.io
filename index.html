@@ -3199,12 +3199,12 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
 				int a[size], b[size];
 				for(i=0;i&lt;size;i++){
 					printf("enter the %dth element in array a: ",i+1);
-					scanf("%d",a+i);
+					scanf("%d",a+i); /*instead of writing a[i], we are using the pointer notation a+i*/
 				}
 				printf("\n\n");
 				for(i=0;i&lt;size;i++){
 					printf("enter the %dth element in array b: ",i+1);
-					scanf("%d",b+i);
+					scanf("%d",b+i); /*instead of writing b[i], we are using the pointer notation b+i*/
 				}
 				add(a,b,size);  //function calling/ invoking
 				return 0;
