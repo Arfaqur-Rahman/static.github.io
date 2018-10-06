@@ -536,7 +536,7 @@ num2 = 5 <br>
                                     <div class="card-header" role="tab" id="headingFive">
                                         <h6 class="mb-0">
                                             <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#tab25" aria-expanded="false" aria-controls="collapseFive">
-          5. Write a program that takes input of a value in  and converts inch and converts it to to centimetre<br>Hint: 1 inch= 2.54 cm
+          5. The distance between two cities(in km.) is input through the keyboard. Write a program to convert and print the distance in meters, feet, inches and centimeters.<br>Hint: 1 km= 1000 m = 3280.84 feet = 39370.1 inch = 10000*100 cm
         </a>
                                         </h6>
                                     </div>
@@ -545,10 +545,10 @@ num2 = 5 <br>
                                             <pre>
 			#include&lt;stdio.h&gt;
 			int main(){
-				float I;
-				printf("Enter a value in inch: ");
-				scanf("%f",&I);
-				printf("%f inch = %f cm", I, I*2.54);
+				float num1;
+				printf("Enter a distance in km and see it converted: ");
+				scanf("%f",&num1);
+				printf("%f km=%.02f meters, %.02f feet, %.02f inches, %.02f centimeters",num1,num1*1000,num1*3280.84,num1*39370.1,num1*1000*100);
 				return 0;
 			}</pre>
                                         </div>
