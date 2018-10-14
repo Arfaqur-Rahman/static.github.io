@@ -3021,6 +3021,81 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
                                     </div>
                                 </div>
 								
+				<!-- 4 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab64">
+          4. Write a C function <strong>void listNumbersAsc(int start, int end)</strong> that outputs the numbers from start to end in an ascending order.
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab64" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+
+			void listNumbersAsc(int start, int end);
+
+			int main(){
+				int start, end;
+				printf("Start the starting number: ");
+				scanf("%d",&start);
+				printf("Start the ending number: ");
+				scanf("%d",&end);
+				listNumbersAsc(start, end);
+				return 0;
+			}
+
+			void listNumbersAsc(int start, int end){
+				int i;
+				for(i=start;i>=end;i--){
+					printf("%d ", i);
+				}
+
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+								
+								
+				<!-- 5 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab65">
+          5. Write a C function <strong>int sumOfDigits(int x)</strong> that returns the sum of digits of the positive integer x. For example, when called with the parameter 12345, it returns 15.
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab65" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+
+			int sumOfDigits(int x);
+
+			int main(){
+				int x, sum;
+				printf("Enter a number: ");
+				scanf("%d",&x);
+				sum = sumOfDigits(x);
+				printf("sum= %d", sum);
+				return 0;
+			}
+
+			int sumOfDigits(int x){
+				int total=0;
+				while(x>0){
+					total = total + x%10;
+					x= x/10;
+				}
+				return total;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>			
+					
 		
 							</div>
                             <!-- end box -->
