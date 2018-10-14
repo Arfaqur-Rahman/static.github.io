@@ -677,7 +677,7 @@ For example if a user inputs 525 taka, the output will be like this:<br>
                                     <div class="card-header" role="tab" id="headingEight">
                                         <h6 class="mb-0">
                                             <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#tab210" aria-expanded="false" aria-controls="collapseEight">
-          10. Write a program that converts a lowercase letter into its uppercase form.
+          10. Write a program that converts a lowercase letter into its uppercase form. Print the ASCII value of the input letter and convert the ASCII value to its binary form.
 
         </a>
                                         </h6>
@@ -688,8 +688,35 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 			#include&lt;stdio.h&gt;
 			int main(){
 				char c;
+				int k,rem1,rem2,rem3,rem4,rem5,rem6,rem7;
 				scanf("%c",&c);
-				printf("%c",c-32);
+				printf("%c\n",c-32);
+				printf("The ASCII value is: %d\n",c-32);
+				k=c-32;
+
+				rem1=k%2;
+
+				k=k/2;
+				rem2=k%2;
+
+				k=k/2;
+				rem3=k%2;
+
+				k=k/2;
+				rem4=k%2;
+
+				k=k/2;
+				rem5=k%2;
+
+				k=k/2;
+				rem6=k%2;
+
+				k=k/2;
+				rem7=k%2;
+
+
+				printf("The binary value of %d is: %d%d%d%d%d%d%d",c-32,rem7,rem6,rem5,rem4,rem3,rem2,rem1);
+				/*This is not the most efficient way of doing it. Once you learn how to use loop and recursive function, you will be able to write more efficient codes for binary conversion.*/
 				return 0;
 			}</pre>
                                         </div>
