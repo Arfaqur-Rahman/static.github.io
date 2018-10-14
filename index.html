@@ -1172,7 +1172,7 @@ For example if a user inputs 525 taka, the output will be like this:<br>
                                     <div class="card-header" role="tab" id="headingThree">
                                         <h6 class="mb-0">
                                             <a class="collapsed" data-toggle="collapse" href="#tab314" aria-expanded="false" aria-controls="collapseThree">
-          13. Write a C program to take 3 integer numbers as input and find the sum of digits of each of the number if they are greater than 20.<br>
+          14. Write a C program to take 3 integer numbers as input and find the sum of digits of each of the number if they are greater than 20.<br>
 			<strong>Input:</strong>  Enter three integer numbers: 29 15 107<br>
 			<strong>Output:</strong>  Sum of 29 is 11<br>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sum of 107 is 8
@@ -1230,6 +1230,57 @@ For example if a user inputs 525 taka, the output will be like this:<br>
                                         </div>
                                     </div>
                                 </div>
+								
+				<!-- 15 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <h6 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#tab315" aria-expanded="false" aria-controls="collapseThree">
+          15. Write a C program to calculate tax.<br>
+			
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab315" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="card-block">
+                                            <pre>
+			+--------------------+-------------+----------------------+
+			|   Salary Range($)  | Base Tax($) | Percentage of Excess |
+			+--------------------+-------------+----------------------+
+			+--------------------+-------------+----------------------+
+			|   0.00-14,999.99   |     0.00    |          15          |
+			+--------------------+-------------+----------------------+
+			| 15,000.00-14,999.99|   2,250.00  |          18          |
+			+--------------------+-------------+----------------------+
+			| 30,000.00-49,999.99|   5,400.00  |          22          |
+			+--------------------+-------------+----------------------+
+			| 50,000.00-79,999.99|   11,000.00 |          27          |
+			+--------------------+-------------+----------------------+
+			|80,000.00-150,000.00|   21,600.00 |          33          |
+			+--------------------+-------------+----------------------+								
+			#include&lt;stdio.h&gt;
+			int main(){
+				float income;
+
+				printf("Enter your income: ");
+				scanf("%f",&income);
+				if(income >= 0.00 && income&lt;= 14999.99){
+					printf("tax = %.02f", 0.00 + income * 0.15 );
+				}else if(income >= 15000.00 && income&lt;= 29999.99) {
+					printf("tax = %.02f", 2250.00 + income * 0.18 );
+				}else if(income >= 30000.00 && income&lt;= 49999.99) {
+					printf("tax = %.02f", 5400.00 + income * 0.22 );
+				}else if(income >= 50000.00 && income&lt;= 79999.99) {
+					printf("tax = %.02f", 11000.00 + income * 0.27 );
+				}else if(income >= 80000.00 && income&lt;= 150000.00) {
+					printf("tax = %.02f", 21600.00 + income * 0.33 );
+				}
+				return 0;
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+				
 					
 
                             </div>
