@@ -691,8 +691,8 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 				int k,rem1,rem2,rem3,rem4,rem5,rem6,rem7;
 				scanf("%c",&c);
 				printf("%c\n",c-32);
-				printf("The ASCII value is: %d\n",c-32);
-				k=c-32;
+				printf("The ASCII value of %c is: %d\n",c,c);
+				k=c;
 
 				rem1=k%2;
 
@@ -715,7 +715,7 @@ For example if a user inputs 525 taka, the output will be like this:<br>
 				rem7=k%2;
 
 
-				printf("The binary value of %d is: %d%d%d%d%d%d%d",c-32,rem7,rem6,rem5,rem4,rem3,rem2,rem1);
+				printf("The binary value of %d is: %d%d%d%d%d%d%d",c,rem7,rem6,rem5,rem4,rem3,rem2,rem1);
 				/*This is not the most efficient way of doing it. Once you learn how to use loop and recursive function, you will be able to write more efficient codes for binary conversion.*/
 				return 0;
 			}</pre>
