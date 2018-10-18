@@ -2732,7 +2732,44 @@ For example, if input is '1' and '30', output will be 4 6 8 16 18 20 28 30 .
 			}</pre>
 										</div>
 									</div>
-								</div>	
+								</div>
+
+
+				<!-- 34 -->
+								<div class="card">
+									<div class="card-header" role="tab" id="headingThree">
+										<h6 class="mb-0">
+											<a class="collapsed" data-toggle="collapse" href="#tab534" aria-expanded="false" aria-controls="collapseThree">
+						34. Write a program to print out all the Armstrong numbers between 1 and 500. If sum of cubes of each digit of the number is equal to the number itself, the number is called an Armstrong number.<br>
+For example, 153 = (1*1*1)+(5*5*5)+(3*3*3) and that's why it's an armstrong number.
+					
+		</a>
+										</h6>
+									</div>
+									<div id="tab534" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+										<div class="card-block">
+											<pre>
+			#include&lt;stdio.h&gt;
+			int main(){
+				int input, rem, num, sum=0;
+				printf("Enter a number between 1 and 500: ");
+				scanf("%d",&input);
+				num = input;
+				while(num!=0){
+					rem= num%10;
+					sum = sum + rem * rem *rem;
+					num = num/10;
+				}
+				if ( input == sum ){
+					printf("%d is an armstrong number!",input);
+				}else{
+					printf("%d is not an armstrong number!",input);
+				}
+				return 0;
+			}</pre>
+										</div>
+									</div>
+								</div>
 				
 						
 						<!-- lab link -->
