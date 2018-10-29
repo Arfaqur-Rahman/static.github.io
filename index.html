@@ -3170,6 +3170,52 @@ For example, 153 = (1*1*1)+(5*5*5)+(3*3*3) and that's why it's an armstrong numb
                                     </div>
                                 </div>
 					
+				<!-- 7 -->
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#tab67">
+          7. Write a C function to calculate the factorial value of any integer entered through the keyboard.
+        </a>
+                                        </h6>
+                                    </div>
+                                    <div id="tab67" class="collapse">
+                                        <div class="card-block">
+                                            <pre>
+			#include&lt;stdio.h&gt;
+
+			float power(int year );
+			int main(){
+				int year;
+				printf("Enter a year: ");
+				scanf("%d",&year);
+				leapyear(year);
+				
+				return 0;
+			}
+
+			int leapyear(int year){
+
+				if(year%4 == 0)
+				{
+					if( year%100 == 0)
+					{
+						if ( year%400 == 0)
+						   return printf("%d is a leap year.", year);
+						else
+						   return printf("%d is not a leap year.", year);
+					}
+					else
+					   return printf("%d is a leap year.", year );
+				}
+				else
+				   return printf("%d is not a leap year.", year);
+    
+			}</pre>
+                                        </div>
+                                    </div>
+                                </div>	
+				
 		
 							</div>
                             <!-- end box -->
